@@ -1,0 +1,226 @@
+:root {
+  /*============= COLORS =============*/
+  --background-color: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --image-overlay: hsl(277, 56%, 51%);
+
+  --heading: hsl(0, 0%, 100%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+
+  /*============= FONTS =============*/
+  --header-font: "Lexend Deca", sans-serif;
+  --body-font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-family: var(--body-font);
+}
+
+h1,
+h2 {
+  font-family: var(--header-font);
+}
+
+.container {
+  position: relative;
+  max-width: 1120px;
+  height: auto;
+  display: flex;
+  padding: 25px;
+  margin: 10vh auto;
+}
+
+/*------- Card Content --------*/
+
+.card {
+  position: relative;
+  background-color: var(--card-background);
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  border-radius: 6px 0 0 6px;
+}
+
+.card__header {
+  font-family: var(--header-font);
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.card__header span {
+  color: var(--image-overlay);
+}
+
+.card__paragraph {
+  color: var(--paragraph);
+  margin-bottom: 50px;
+  line-height: 2rem;
+  font-size: 1rem;
+  padding-right: 3rem;
+}
+
+.card__footer {
+  display: flex;
+}
+
+.card__footer span {
+  margin-right: 3.6rem;
+}
+
+.card__footer h2 {
+  margin-bottom: 0.4rem;
+}
+
+.card__footer p {
+  color: var(--paragraph);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+/*------- Card Image --------*/
+
+.img__box {
+  position: relative;
+  background: url(/img/img2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.img__box .overlay {
+  background-color: var(--image-overlay);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 6px 6px 0px;
+}
+
+/**=========================== MEDIA QUERIES ========================== */
+
+/* for medium screen */
+ @media  (max-width: 968px) {
+  .card {
+    padding: 2.5rem;
+  }
+  .card__header h1 {
+    font-size: 1.9rem;
+  }
+
+  .card__paragraph {
+    font-size: 0.9rem;
+  }
+
+  .card__footer span {
+    margin-right: 3rem;
+  }
+
+  .card__footer span h2 {
+    font-size: 1.4rem;
+  }
+
+  .card__footer span p {
+    font-size: 0.7rem;
+  }
+} 
+
+/* for medium to small screen */
+
+@media screen and (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80%;
+        height: 150vh; 
+        margin: 50px auto;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        border-radius: 0 0 6px  6px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .card__header {
+      margin: 15px 0;
+    }
+
+    .card__header h1{
+      font-size: 2.5rem;
+    }
+
+    .card__paragraph {
+      font-size: 1rem;
+      padding: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .img__box {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px 6px 0 0;
+    }
+
+     .img__box .overlay {
+        border-radius: 6px 6px 0 0;
+    }
+
+    .card__footer {
+        display: block;
+    }
+
+    .card__footer span h2 {
+      font-size: 1.8rem;
+    }
+} 
+
+/* for small screen*/
+
+@media screen and (max-width:527px) {
+  .card__header {
+    margin: 15px 0;
+  }
+
+  .card__header h1 {
+    font-size: 2rem;
+  }
+
+  .card__paragraph {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .card__footer span h2 {
+    font-size: 1.5rem;
+  }
+ 
+}
+
+/* for very small screen */
+
+@media screen and (max-width:360px) {
+  .container {
+    height: 200vh;
+  }
+
+  .card__header h1 {
+    font-size: 1.8rem;
+  }
+}
