@@ -93,7 +93,7 @@ h2 {
 
 .img__box {
   position: relative;
-  background: url(/img/img2.jpg);
+  background: url("/img/img2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
